@@ -1,0 +1,126 @@
+.bracket {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.round {}
+
+.roundHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border2);
+  margin-bottom: 10px;
+}
+
+.roundLabel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.roundCount {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.matchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+
+.match {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.matchMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  background: #141414;
+  border-bottom: 1px solid var(--border);
+}
+
+.matchNum {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--kick);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.matchDate {
+  font-size: 11px;
+  color: var(--muted);
+  flex: 1;
+}
+
+.statusBadge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.played  { background: rgba(27,175,122,0.15); color: var(--green); }
+.upcoming { background: rgba(255,255,255,0.06); color: var(--muted); }
+
+.matchBody {
+  padding: 0;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  color: #999;
+  transition: background 0.1s;
+}
+
+.teamInner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 12px;
+}
+
+.won { color: var(--text) !important; }
+.won .teamInner { font-weight: 600; }
+
+.tbd { color: #444; font-style: italic; }
+
+.score {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 20px;
+  text-align: right;
+}
+
+.flagImg {
+  width: 18px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}

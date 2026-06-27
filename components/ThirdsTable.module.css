@@ -1,0 +1,103 @@
+.wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  background: #141414;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.tableScroll { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.table th {
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: #0f0f0f;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td { border-bottom: none; }
+
+.qualify { background: rgba(83,252,24,0.04); }
+
+.left { text-align: left !important; }
+.center { text-align: center !important; }
+
+.playerCell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flagImg {
+  width: 18px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.nation {
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.grp { font-weight: 700; color: var(--kick); }
+
+.pts { font-weight: 700 !important; color: var(--kick) !important; }
+
+.badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: rgba(27,175,122,0.15);
+  color: var(--green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.empty {
+  text-align: center !important;
+  color: var(--muted);
+  padding: 1.5rem !important;
+  font-style: italic;
+}

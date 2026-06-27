@@ -1,0 +1,96 @@
+.header {
+  background: #0d0d0d;
+  border-bottom: 1px solid var(--border2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { display: flex; align-items: center; gap: 10px; }
+
+.trophy { font-size: 20px; line-height: 1; }
+
+.title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+  margin-top: 1px;
+}
+
+.links { display: flex; align-items: center; gap: 8px; }
+
+.kickLink, .discordLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.kickLink:hover, .discordLink:hover { opacity: 0.8; }
+
+.kickLink {
+  color: #000;
+  background: var(--kick);
+}
+
+.discordLink {
+  color: #fff;
+  background: #5865f2;
+}
+
+.kickDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.nav { display: flex; padding: 0 1.5rem; }
+
+.tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: color 0.15s;
+  margin-bottom: -1px;
+}
+
+.tab:hover { color: var(--text); }
+
+.tab.active {
+  color: var(--kick);
+  border-bottom-color: var(--kick);
+}

@@ -1,0 +1,97 @@
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+/* Landing has its own top padding */
+.main > section { padding-top: 1.5rem; }
+
+.sectionHead { margin-bottom: 1.25rem; }
+
+.sectionTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sectionSub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Groups */
+.groupsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Matchdays */
+.matchdays {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.matchdayBlock {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.matchdayHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 1rem;
+  background: #141414;
+  border-bottom: 1px solid var(--border);
+}
+
+.matchdayLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--kick);
+}
+
+.matchdayDate {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.matchdayCount {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.matchdayMatches {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footerKick   { color: var(--kick); font-weight: 500; }
+.footerKick:hover { text-decoration: underline; }
+.footerDiscord { color: #5865f2; font-weight: 500; }
+.footerDiscord:hover { text-decoration: underline; }
