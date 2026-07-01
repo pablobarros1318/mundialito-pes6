@@ -8,10 +8,10 @@ const SORTEO_DATE = new Date(new Date().setHours(20, 0, 0, 0));
 const PLAYERS = [
   "urubaunsub", "Hunter_rodrig29", "Lukitax", "VILLAKIDD",
   "Marcos_Emirr", "daiansuarez1", "Maxi_LV16", "Rider_PermaDeath",
-  "Benja2301s", "Blastoise21", "IgnacioTO5", "prodbyLextone",
+  "Saicrou", "Blastoise21", "IgnacioTO5", "prodbyLextone",
   "emiliozeeta", "ObitoGames36", "Rasek", "Markito9320",
   "Shintejon", "1ru7", "Hikusen", "JonyFz",
-  "evilomt", "GordooManuu", "momegre57", "Kenshi777",
+  "evilomt", "Jugador24", "momegre57", "Kenshi777",
 ];
 
 const NATIONS = [
