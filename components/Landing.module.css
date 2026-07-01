@@ -1,15 +1,14 @@
 .landing {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* ── Hero ──────────────────────────────────────────── */
 .hero {
   text-align: center;
-  padding: 3rem 1rem 2.5rem;
+  padding: 3rem 1rem 2rem;
   border-bottom: 1px solid var(--border);
-  position: relative;
 }
 
 .heroEyebrow {
@@ -49,7 +48,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 24px;
   font-size: 13px;
   font-weight: 600;
@@ -57,30 +56,127 @@
   transition: opacity 0.15s, transform 0.1s;
 }
 .cta:hover { opacity: 0.85; transform: translateY(-1px); }
-.cta:active { transform: scale(0.98); }
-
-.ctaKick {
-  background: var(--kick);
-  color: #000;
-}
-
-.ctaDiscord {
-  background: #5865f2;
-  color: #fff;
-}
+.ctaKick    { background: var(--kick); color: #000; }
+.ctaDiscord { background: #5865f2; color: #fff; }
 
 .ctaDot {
-  width: 7px;
-  height: 7px;
+  width: 7px; height: 7px;
   border-radius: 50%;
   background: #000;
   animation: blink 2s infinite;
 }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+/* ── Countdown ──────────────────────────────────────── */
+.countdown {
+  background: #0d0d0d;
+  border: 1px solid rgba(83,252,24,0.25);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
+
+.countdownLive {
+  border-color: var(--red);
+  background: rgba(227,73,72,0.06);
+}
+
+.countdownEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--kick);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.liveDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: blink 1s infinite;
+  flex-shrink: 0;
+}
+
+.countdownTimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 12px 20px;
+  min-width: 80px;
+}
+
+.countdownNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdownLabel {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.countdownSep {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--kick);
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+.countdownSub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.countdownLink { color: var(--kick); font-weight: 600; text-decoration: none; }
+.countdownLink:hover { text-decoration: underline; }
+.countdownLinkDiscord { color: #5865f2; font-weight: 600; text-decoration: none; }
+.countdownLinkDiscord:hover { text-decoration: underline; }
+
+.countdownLiveText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.liveBtn {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 22px;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.liveBtn:hover { opacity: 0.85; }
 
 /* ── Info row ───────────────────────────────────────── */
 .infoRow {
@@ -113,69 +209,88 @@
   margin-top: 4px;
 }
 
-/* ── Current matchday ───────────────────────────────── */
-.matchdaySection {
+/* ── Lists ──────────────────────────────────────────── */
+.listsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .listsGrid { grid-template-columns: 1fr; }
+}
+
+.listCard {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
-.matchdayHeader {
+.listHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 0.85rem 1.1rem;
+  gap: 8px;
+  padding: 0.6rem 0.9rem;
   background: #141414;
   border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
 }
 
-.matchdayEyebrow {
+.listIcon { font-size: 15px; }
+
+.listTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.listCount {
+  font-size: 11px;
+  color: var(--kick);
+  font-weight: 700;
+  background: var(--kick-dim);
+  padding: 1px 7px;
+  border-radius: 20px;
+}
+
+.listBody { display: flex; flex-direction: column; }
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12.5px;
+}
+.listItem:last-child { border-bottom: none; }
+
+.listNum {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: var(--bg3);
+  color: var(--muted);
   font-size: 10px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--kick);
-  margin-bottom: 2px;
-}
-
-.matchdayTitle {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.viewAll {
-  background: none;
-  border: 1px solid var(--border2);
-  color: var(--muted);
-  font-size: 12px;
-  padding: 5px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: color 0.15s, border-color 0.15s;
-}
-.viewAll:hover { color: var(--text); border-color: var(--text); }
-
-.matchList {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.matchList > * {
-  border-radius: 0 !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-top: none !important;
+.listFlag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
-.matchList > *:last-child {
-  border-bottom: none !important;
+.listText {
+  color: var(--text);
+  font-weight: 500;
 }
 
 /* ── Quick nav ──────────────────────────────────────── */
@@ -194,23 +309,11 @@
   border-radius: var(--radius);
   padding: 0.85rem 1rem;
   cursor: pointer;
-  text-align: left;
   transition: border-color 0.15s, background 0.15s;
   width: 100%;
 }
 .navCard:hover { border-color: var(--border2); background: var(--bg3); }
 
-.navIcon { font-size: 18px; flex-shrink: 0; }
-
-.navLabel {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  flex: 1;
-}
-
-.navArrow {
-  color: var(--muted);
-  font-size: 14px;
-  flex-shrink: 0;
-}
+.navIcon  { font-size: 18px; flex-shrink: 0; }
+.navLabel { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; text-align: left; }
+.navArrow { color: var(--muted); font-size: 14px; flex-shrink: 0; }
