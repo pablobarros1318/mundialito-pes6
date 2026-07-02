@@ -4,10 +4,10 @@ import styles from "./Sorteo.module.css";
 const PLAYERS = [
   "urubaunsub", "Hunter_rodrig29", "Lukitax", "VILLAKIDD",
   "Marcos_Emirr", "daiansuarez1", "Maxi_LV16", "Rider_PermaDeath",
-  "Saicrou", "Blastoise21", "IgnacioTO5", "prodbyLextone",
+  "Benja2301s", "Blastoise21", "IgnacioTO5", "prodbyLextone",
   "emiliozeeta", "ObitoGames36", "Rasek", "Markito9320",
   "Shintejon", "1ru7", "Hikusen", "JonyFz",
-  "evilomt", "Jugador24", "momegre57", "Kenshi777",
+  "evilomt", "GordooManuu", "momegre57", "Kenshi777",
 ];
 
 const NATIONS = [
