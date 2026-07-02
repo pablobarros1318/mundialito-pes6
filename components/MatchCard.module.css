@@ -59,7 +59,7 @@
 }
 
 .home { justify-content: flex-end; flex-direction: row; }
-.away { justify-content: flex-start; flex-direction: row-reverse; }
+.away { justify-content: flex-start; flex-direction: reverse; }
 
 .teamName {
   font-size: 13px;
