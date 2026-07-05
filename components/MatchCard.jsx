@@ -13,7 +13,10 @@ function Events({ goals, cards, align }) {
   const hasCards = cards?.length > 0;
   if (!hasGoals && !hasCards) return null;
 
-  // Count repeated goal scorers
+  const regular  = (goals || []).filter(g => !g.startsWith("OG:"));
+  const ownGoals = (goals || []).filter(g =>  g.startsWith("OG:")).map(g => g.slice(3).trim());
+ 
+  
   const goalCounts = (goals || []).reduce((acc, g) => { acc[g] = (acc[g] || 0) + 1; return acc; }, {});
   const uniqueGoals = [...new Set(goals || [])];
 

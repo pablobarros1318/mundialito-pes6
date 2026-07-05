@@ -18,6 +18,7 @@ function computeScorers() {
     sides.forEach(({ goals, playerId }) => {
       if (!goals?.length || !playerId) return;
       goals.forEach(name => {
+        if (name.startsWith("G.E.:")) return; // ignorar goles en contra
         const key = `${name}|${playerId}`;
         if (!totals[key]) totals[key] = { name, playerId, goals: 0 };
         totals[key].goals++;
