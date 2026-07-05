@@ -7,7 +7,8 @@ import ThirdsTable from "../components/ThirdsTable";
 import MatchCard from "../components/MatchCard";
 import Bracket from "../components/Bracket";
 import Rules from "../components/Rules";
-import { getMatchdaysWithMatches } from "../lib/standings";
+import Scorers from "../components/Scorers";
+import { getMatchdaysWithMatches, getAllThirds, getPlayer, getMatchesByGroup, getMatchesByStage } from "../lib/standings";
 import { GROUPS } from "../lib/tournament";
 import styles from "./index.module.css";
 
@@ -40,12 +41,18 @@ export default function Home() {
               <h2 className={styles.sectionTitle}>Fase de grupos</h2>
               <p className={styles.sectionSub}>Clasifican los 2 primeros de cada grupo + 4 mejores terceros</p>
             </div>
-            <div className={styles.groupsGrid}>
-              {Object.keys(GROUPS).map(letter => (
-                <GroupTable key={letter} letter={letter} />
-              ))}
+            <div className={styles.gruposLayout}>
+              <div className={styles.gruposTop}>
+                <div className={styles.gruposLeft}>
+                  {["A","B","C"].map(letter => <GroupTable key={letter} letter={letter} />)}
+                </div>
+                <div className={styles.gruposRight}>
+                  {["D","E","F"].map(letter => <GroupTable key={letter} letter={letter} />)}
+                </div>
+              </div>
+              <Scorers />
+              <ThirdsTable />
             </div>
-            <ThirdsTable />
           </section>
         )}
 
